@@ -25,5 +25,6 @@ Ein Push auf `main` reicht, damit alle Launcher das neue Spiel beim nächsten St
 | `args` | nein | Startargumente. |
 | `preserve` | nein | Pfade im Installationsordner, die Updates überleben (z. B. Spielstände neben der exe). |
 | `includePrereleases` | nein | Pre-Releases als normale Updates anbieten. |
+| `multiplayer` | nein | Spiel nutzt den Mehrspieler des Launchers (`mett-net`); zeigt „Mit Freunden spielen“. |
 
 `tools/make-kasse0-art.py` erzeugt die KASSE-0-Bilder (`uv run tools/make-kasse0-art.py <ArchivoBlack-Regular.ttf>`).
