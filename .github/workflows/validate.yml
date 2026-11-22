@@ -1,0 +1,31 @@
+name: Katalog prüfen
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: games.json prüfen
+        shell: python
+        run: |
+          import json, os, re, sys
+          data = json.load(open("games.json", encoding="utf-8"))
+          assert data.get("schema") == 1, "schema muss 1 sein"
+          ids = set()
+          for g in data["games"]:
+              for key in ("id", "name", "repo", "assetPattern", "exe"):
+                  assert g.get(key), f"{g.get('id')}: Feld {key} fehlt"
+              assert re.fullmatch(r"[a-z0-9][a-z0-9._-]{0,63}", g["id"], re.I), f"ungültige id {g['id']}"
+              assert g["id"] not in ids, f"doppelte id {g['id']}"
+              ids.add(g["id"])
+              assert re.fullmatch(r"[A-Za-z0-9-]+/[A-Za-z0-9._-]+", g["repo"]), f"ungültiges repo {g['repo']}"
+              re.compile(g["assetPattern"])
+              assert ".." not in g["exe"] and not os.path.isabs(g["exe"]), "exe muss relativ sein"
+              for img in (g.get("cover"), g.get("hero")):
+                  if img:
+                      assert os.path.isfile(img), f"Bild fehlt: {img}"
+          print(f"OK: {len(ids)} Spiel(e)")

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "games": [
+    {
+      "id": "kasse0",
+      "name": "KASSE 0",
+      "repo": "Mett-Gaming/kasse0",
+      "tagline": "Liminaler Supermarkt-Horror auf VHS",
+      "cover": "covers/kasse0.png",
+      "hero": "covers/kasse0-hero.png",
+      "assetPattern": "^KASSE0-v.*\\.zip$",
+      "stripTopFolder": true,
+      "exe": "KASSE0.exe",
+      "args": [],
+      "preserve": [],
+      "includePrereleases": false
+    }
+  ]
+}
