@@ -14,6 +14,21 @@
       "args": [],
       "preserve": [],
       "includePrereleases": false
+    },
+    {
+      "id": "hackepeter",
+      "name": "HACKEPETER",
+      "repo": "Mett-Gaming/hackepeter",
+      "tagline": "Die Mettbrötchen-Flucht: ein Dieb gegen das Ordnungsamt, bis zu 8 Leute",
+      "cover": "covers/hackepeter.png",
+      "hero": "covers/hackepeter-hero.png",
+      "assetPattern": "^HACKEPETER-v.*\\.zip$",
+      "stripTopFolder": true,
+      "exe": "HACKEPETER.exe",
+      "args": [],
+      "preserve": [],
+      "includePrereleases": false,
+      "multiplayer": true
     }
   ]
 }

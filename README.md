@@ -29,4 +29,4 @@ Ein Push auf `main` reicht, damit alle Launcher das neue Spiel beim nächsten St
 | `linux` | nein | `proton` (Standard: Windows-Build läuft unter Linux über Proton) oder `native` (Zip enthält einen Linux-Build). |
 | `umuId` | nein | Eintrag aus der [umu-Datenbank](https://umu.openwinecomponents.org/) für Proton-Fixes; ohne = `umu-default`. |
 
-`tools/make-kasse0-art.py` erzeugt die KASSE-0-Bilder (`uv run tools/make-kasse0-art.py <ArchivoBlack-Regular.ttf>`).
+`tools/make-kasse0-art.py` und `tools/make-hackepeter-art.py` erzeugen die Bilder der Spiele (`uv run tools/make-<spiel>-art.py <ArchivoBlack-Regular.ttf>`).
