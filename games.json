@@ -30,6 +30,20 @@
       "preserve": [],
       "includePrereleases": false,
       "multiplayer": true
+    },
+    {
+      "id": "mettclient",
+      "name": "Mett-Client",
+      "repo": "Mett-Gaming/mett-client",
+      "tagline": "HUD, Zoom und Menü direkt in Minecraft Bedrock (inoffiziell)",
+      "cover": "covers/mettclient.png",
+      "hero": "covers/mettclient-hero.png",
+      "assetPattern": "^MettClient-v.*\\.zip$",
+      "stripTopFolder": true,
+      "exe": "MettClient.exe",
+      "args": ["--launcher"],
+      "preserve": [],
+      "includePrereleases": false
     }
   ]
 }
